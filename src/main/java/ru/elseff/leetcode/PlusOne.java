@@ -20,9 +20,4 @@ public class PlusOne {
         digits[0]=1;
         return digits;
     }
-
-    private static boolean incrementAndGetNeedleOfTransferUnit(int[] digits, int index) {
-        digits[index] = digits[index] + 1;
-        return digits[index] == 10;
-    }
 }
