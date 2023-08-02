@@ -1,6 +1,8 @@
 package ru.elseff.leetcode;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TwoSum {
     public static void main(String[] args) {
@@ -24,6 +26,19 @@ public class TwoSum {
             }
             firstPointer += 1;
             lastPointer = firstPointer;
+        }
+        return new int[0];
+    }
+
+    public static int[] improvedTwoSum(int[] nums, int target){
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int current = nums[i];
+            if (map.containsKey(current)) {
+                return new int[]{i, map.get(current)};
+            } else {
+                map.put(target - current, i);
+            }
         }
         return new int[0];
     }
