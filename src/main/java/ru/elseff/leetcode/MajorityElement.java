@@ -2,7 +2,7 @@ package ru.elseff.leetcode;
 
 public class MajorityElement {
     public static void main(String[] args) {
-        int[] nums = {3, 2, 3,2,2,3,4,4,4,4,4};
+        int[] nums = {3, 3,2};
         System.out.println(majority(nums));
     }
 
@@ -14,7 +14,7 @@ public class MajorityElement {
                 result = nums[i];
                 count++;
             }
-            else if (nums[i]==count) {
+            else if (nums[i]==result) {
                 count++;
             }else {
                 count--;
@@ -22,4 +22,6 @@ public class MajorityElement {
         }
         return result;
     }
+
+
 }
